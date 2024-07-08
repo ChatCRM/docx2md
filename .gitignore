@@ -196,3 +196,5 @@ pyrightconfig.json
 
 *.docx
 *.md
+!README.md
+!CONTRIBUTING.md
