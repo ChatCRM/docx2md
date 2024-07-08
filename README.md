@@ -1,6 +1,6 @@
 # DOCX to Markdown Converter
 
-This script converts DOCX files to Markdown format. It utilizes the `mammoth` library to convert DOCX files to HTML and `markdownify` to convert HTML to Markdown.
+This project provides a command-line tool to convert DOCX files to Markdown format. It utilizes the `mammoth` library to convert DOCX files to HTML and `markdownify` to convert HTML to Markdown.
 
 ## Features
 
@@ -21,12 +21,24 @@ You can install the required libraries using pip:
 pip install mammoth markdownify
 ```
 
-## Usage
+## Installation
 
-Run the script from the command line with the following arguments:
+To install the `docx2md` command-line tool, clone the repository and use `pip` to install it:
 
 ```sh
-python main.py path_to_docx_file path_to_markdown_file [-v]
+git clone https://github.com/ChatCRM/docx2md.git
+cd docx2md
+pip install .
+```
+
+This will install the `docx2md` command globally on your system.
+
+## Usage
+
+Run the `docx2md` command from the command line with the following arguments:
+
+```sh
+docx2md path_to_docx_file path_to_markdown_file [-v]
 ```
 
 ### Arguments
@@ -38,7 +50,7 @@ python main.py path_to_docx_file path_to_markdown_file [-v]
 ### Example
 
 ```sh
-python main.py example.docx example.md -v
+docx2md example.docx example.md -v
 ```
 
 ### Description
@@ -66,6 +78,10 @@ Converting HTML to Markdown...
 Markdown file saved to 'example.md'
 Conversion completed successfully.
 ```
+
+## Contributing
+
+We welcome contributions to the DOCX to Markdown Converter project. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## License
 

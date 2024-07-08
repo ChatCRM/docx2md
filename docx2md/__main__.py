@@ -3,7 +3,6 @@ from markdownify import markdownify as md
 import argparse
 import os
 
-
 def docx_to_html(docx_path):
     try:
         with open(docx_path, "rb") as docx_file:
@@ -13,7 +12,6 @@ def docx_to_html(docx_path):
     except Exception as e:
         print(f"Error converting DOCX to HTML: {e}")
         raise
-
 
 def docx_to_markdown(docx_path, md_path, verbose=False):
     try:
@@ -37,7 +35,6 @@ def docx_to_markdown(docx_path, md_path, verbose=False):
         print(f"Error converting DOCX to Markdown: {e}")
         raise
 
-
 def main():
     parser = argparse.ArgumentParser(description="Convert DOCX to Markdown.")
     parser.add_argument("docx_path", type=str, help="Path to the DOCX file")
@@ -57,27 +54,4 @@ def main():
 
     # Validate Markdown file extension
     if not args.md_path.lower().endswith(".md"):
-        print(f"Error: The output file '{args.md_path}' does not have a .md extension.")
-        return
-
-    # Check if Markdown file already exists
-    if os.path.isfile(args.md_path):
-        overwrite = input(f"The file '{args.md_path}' already exists. Do you want to overwrite it? (y/n): ")
-        if overwrite.lower() != "y":
-            print("Operation cancelled.")
-            return
-
-    # Perform the conversion
-    if args.verbose:
-        print(f"Starting conversion of '{args.docx_path}' to '{args.md_path}'...")
-
-    try:
-        docx_to_markdown(args.docx_path, args.md_path, args.verbose)
-        if args.verbose:
-            print("Conversion completed successfully.")
-    except Exception as e:
-        print(f"Conversion failed: {e}")
-
-
-if __name__ == "__main__":
-    main()
+        print(f"Error
