@@ -26,7 +26,7 @@ pip install mammoth markdownify
 Run the script from the command line with the following arguments:
 
 ```sh
-python script_name.py path_to_docx_file path_to_markdown_file [-v]
+python main.py path_to_docx_file path_to_markdown_file [-v]
 ```
 
 ### Arguments
@@ -38,7 +38,7 @@ python script_name.py path_to_docx_file path_to_markdown_file [-v]
 ### Example
 
 ```sh
-python docx_to_md.py example.docx example.md -v
+python main.py example.docx example.md -v
 ```
 
 ### Description
